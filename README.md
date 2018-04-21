@@ -8,7 +8,7 @@ I've had a think of how to structure this and the best format I've thought of so
 2. Inside that folder, put a readme with any info/links about the SynthDefs you've contributed, and any other information you want to include.
 3. Make a subfolder for `SynthDefs` and a subfolder for `Examples`
 4. Put your `SynthDefs` in the `SynthDefs` folder, preferably commented with some information about what they are for, and what variables do. Try and package the SynthDefs as executable `.scd` files so that they can be pulled into other projects easily, or can be referenced easily within your `Examples`.
-5. If you can, put some examples of how you use the SynthDefs in the example folder - to give an idea of how to use it, and any sweet spots in the settings
+5. If you can, put some examples of how you use the SynthDefs in the example folder - to give an idea of how to use them, and any sweet spots in the settings that would otherwise be hard to discover.
 6. Make whatever other folders you think you need to functionally package the SynthDef (samples/tunings/data/etc)
 7. Open a pull request and get your SynthDefs in here. The more the merrier.
 
