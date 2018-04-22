@@ -13,7 +13,9 @@ I've had a think of how to structure this and the best format I've thought of so
 7. Add your username to the list of contributors in `contributors.md`
 8. Open a pull request and get your SynthDefs in here. The more the merrier.
 
-I've made an `Example_user` folder that demonstrates this with one SynthDef and examples
+I've made an `Example_user` folder that demonstrates this with one SynthDef and examples.
+
+If you don't have a GitHub account or aren't familiar with the process but have something to contribute, find me on @theseanco on social media, or e-mail theseancotterill atsign live period com and i'll give you a hand!
 
 This format is pretty flexible, so don't feel bound to it. Equally don't feel bound to just adding SynthDefs, add bits of synthesis, cool functions, one-liners etc etc. Really the goal is to build a library of practices that SuperCollider folks are using, with the hope that we can learn from each other.
 
