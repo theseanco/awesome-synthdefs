@@ -501,5 +501,69 @@ SynthDef(\scalebplay,
 }).add;
 
 
+/*
+
+pulse3, sinfb3, saw3, tri3
+
+freq = frequency
+width = pulse width (for pulse3 only)
+atk = attack
+sus = sustain
+rel = release
+fb = feedback (for sinfb3 only)
+amp = amplitude
+out = channel out
+pan = stereo position
+det = Frequency to detune by, oscillator 2 will have det added, oscillator 3 will have det subtracted:
+e.g. freq = 440, det = 10: sig1 = 440, sig2 = 430, sig3 = 450
+
+
+*/
+
+(
+SynthDef(\pulse3, {
+	arg freq = 440, width = 0.5, atk = 0.01, sus = 0, rel = 1, fb = 0, amp = 0.3, out = 0, pan=0, det = 0;
+	var sig, sig2, sig3, env;
+	env = EnvGen.ar(Env.linen(atk,sus,rel),1,1,0,1,2);
+	sig = PulseDPW.ar(freq,width);
+	sig2 = PulseDPW.ar(freq + det,width);
+	sig3 = PulseDPW.ar(freq - det,width);
+	sig = Mix.ar([sig,sig2,sig3])*env;
+	Out.ar(out,Pan2.ar(sig,pan,amp));
+}).add;
+
+SynthDef(\sinfb3, {
+	arg freq = 440, width = 0.5, atk = 0.01, sus = 0, rel = 1, fb = 0, amp = 0.3, out = 0, pan=0, det = 0;
+	var sig, sig2, sig3, env;
+	env = EnvGen.ar(Env.linen(atk,sus,rel),1,1,0,1,2);
+	sig = SinOscFB.ar(freq,fb);
+	sig2 = SinOscFB.ar(freq + det,fb);
+	sig3 = SinOscFB.ar(freq - det,fb);
+	sig = Mix.ar([sig,sig2,sig3])*env;
+	Out.ar(out,Pan2.ar(sig,pan,amp));
+}).add;
+
+SynthDef(\saw3, {
+	arg freq = 440, width = 0.5, atk = 0.01, sus = 0, rel = 1, fb = 0, amp = 0.3, out = 0, pan=0, det = 0, phase = 0;
+	var sig, sig2, sig3, env;
+	env = EnvGen.ar(Env.linen(atk,sus,rel),1,1,0,1,2);
+	sig = SawDPW.ar(freq,phase,1);
+	sig2 = SawDPW.ar(freq + det,phase,1);
+	sig3 = SawDPW.ar(freq - det,phase,1);
+	sig = Mix.ar([sig,sig2,sig3])*env;
+	Out.ar(out,Pan2.ar(sig,pan,amp));
+}).add;
+
+SynthDef(\tri3, {
+	arg freq = 440, width = 0.5, atk = 0.01, sus = 0, rel = 1, fb = 0, amp = 0.3, out = 0, pan=0, det = 0, phase = 0;
+	var sig, sig2, sig3, env;
+	env = EnvGen.ar(Env.linen(atk,sus,rel),1,1,0,1,2);
+	sig = LFTri.ar(freq,phase,1);
+	sig2 = LFTri.ar(freq + det,phase,1);
+	sig3 = LFTri.ar(freq - det,phase,1);
+	sig = Mix.ar([sig,sig2,sig3])*env;
+	Out.ar(out,Pan2.ar(sig,pan,amp));
+}).add;
+)
 
 )
