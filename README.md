@@ -1,6 +1,6 @@
 # awesome-synthdefs
 
-This is a repository of SynthDefs for the SuperCollider language, started with the hope of 'synthesizing' (forgive me) some community knowledge on how to write SynthDefs and make some good sounds.
+This is a repository of SynthDefs for the SuperCollider language, started with the hope of 'synthesizing' (forgive me) some community knowledge on how to write SynthDefs and make some good sounds. I made this with an emphasis on documentation and providing examples, with the hope of keeping contributions as usable and modular as possible.
 
 I've had a think of how to structure this and the best format I've thought of so far is to do the following:
 
@@ -17,6 +17,6 @@ I've made an `Example_user` folder that demonstrates this with one SynthDef and 
 
 If you don't have a GitHub account or aren't familiar with the process but have something to contribute, find me on @theseanco on social media, or e-mail theseancotterill atsign live period com and i'll give you a hand!
 
-This format is pretty flexible, so don't feel bound to it. Equally don't feel bound to just adding SynthDefs, add bits of synthesis, cool functions, one-liners etc etc. Really the goal is to build a library of practices that SuperCollider folks are using, with the hope that we can learn from each other.
+This format is pretty flexible, so don't feel bound to it. Equally don't feel bound to just adding SynthDefs, add bits of synthesis, cool functions, one-liners etc etc. Really the goal is to build a library of practices that SuperCollider folks are using, with the hope that we can learn from each other, the most important thing is to do some documenting so others can get the most out of your contributions!
 
 Unless stated by individual authors, materials in this repo are CC0
